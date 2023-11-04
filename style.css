@@ -95,15 +95,17 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  padding: 4rem 0;
 }
 
-#snippets h2 {
+#snippets h2,
+#clipboard h2 {
   font-size: 35px;
   text-align: center;
 }
 
-#snippets>p {
+#snippets>p,
+#clipboard>p {
   text-align: center;
   margin: 30px 0;
 }
@@ -132,3 +134,11 @@ p {
 }
 
 /* Snippets End */
+
+/* Clipboard Start */
+#clipboard {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* Clipboard End */
