@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 h1,
 h2,
 h3 {
@@ -34,6 +38,12 @@ p {
 }
 
 /* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -79,18 +89,20 @@ p {
   font-size: 45px;
 }
 
-#header .header-content .download {
+#header .header-content .download,
+#section-4 .download {
   margin-top: 2rem;
 }
 
-#header .header-content .download a {
+#header .header-content .download a,
+#section-4 .download a {
   margin: 0 5px;
 }
 
 /* Header End */
 
-/* Snippets Start */
-#snippets {
+/* Section 1 Start */
+#section-1 {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -98,47 +110,108 @@ p {
   padding: 4rem 0;
 }
 
-#snippets h2,
-#clipboard h2 {
+#section-1 h2,
+#section-2 h2,
+#section-3 h2,
+#section-4 h2 {
   font-size: 35px;
   text-align: center;
 }
 
-#snippets>p,
-#clipboard>p {
+#section-1>p,
+#section-2>p,
+#section-3>p,
+#section-4>p {
   text-align: center;
   margin: 30px 0;
 }
 
-#snippets .row {
+#section-1 .row {
   display: flex;
   margin-top: 3rem;
 }
 
-#snippets .row img {
+#section-1 .row img {
   transform: translateX(-30px);
   margin-right: 4rem;
 }
 
-#snippets .row .col .item {
+#section-1 .row .col .item {
   margin: 50px 0;
 }
 
-#snippets .row .col .item h3 {
+#section-1 .row .col .item h3 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-#snippets .row .col .item p {
+#section-1 .row .col .item p {
   font-size: 16px;
 }
 
-/* Snippets End */
+/* Section 1 End */
 
-/* Clipboard Start */
-#clipboard {
+/* Section 2 Start */
+#section-2,
+#section-3,
+#section-4 {
   text-align: center;
   padding: 4rem 0;
 }
 
-/* Clipboard End */
+/* Section 2 End */
+
+/* Section 3 Start */
+#section-3 .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 5rem;
+  column-gap: 1rem;
+}
+
+#section-3 .row h3 {
+  font-size: 24px;
+  margin: 30px 0 20px;
+}
+
+#section-3 .row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+/* Section 3 End */
+/* Footer Start */
+#footer {
+  background-color: hsl(200, 100%, 98%);
+  padding: 3rem 0;
+}
+
+#footer .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+  justify-content: center;
+}
+
+#footer .row .logo {
+  width: 60px;
+}
+
+#footer .row ul li {
+  margin-bottom: 20px;
+}
+
+#footer .row a {
+  color: var(--dark-grayish-blue);
+}
+
+#footer .social-links {
+  align-self: center;
+}
+
+#footer .social-links a {
+  margin-right: 15px;
+}
+
+/* Footer End */
