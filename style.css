@@ -42,13 +42,6 @@ p {
 }
 
 /* Utility Classes */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  /* For responsive */
-  padding: 0 2rem;
-}
-
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -77,7 +70,6 @@ p {
 /* Header Start */
 #header {
   background: url("./images/bg-header-desktop.png") no-repeat center center/cover;
-  height: 70vh;
 }
 
 #header .header-content {
@@ -88,7 +80,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 70vh;
   /* Responsive */
   padding: 0 1rem;
 }
@@ -115,21 +107,21 @@ p {
   padding: 4rem 0;
 }
 
-#section-1 .section-title,
-#section-2 .section-title,
-#section-3 .section-title,
-#section-4 .section-title {
+#section-1 .section-heading,
+#section-2 .section-heading,
+#section-3 .section-heading,
+#section-4 .section-heading {
   max-width: 650px;
   margin: auto;
   text-align: center;
   /* Responsive */
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
-#section-1 .section-title p,
-#section-2 .section-title p,
-#section-3 .section-title p,
-#section-4 .section-title p {
+#section-1 .section-heading p,
+#section-2 .section-heading p,
+#section-3 .section-heading p,
+#section-4 .section-heading p {
   margin: 20px 0;
 }
 
@@ -169,29 +161,30 @@ p {
 /* Section 2 End */
 
 /* Section 3 Start */
-#section-3 .row {
+#section-3 .section-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+#section-3 .section-content .row-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 5rem;
   column-gap: 1rem;
 }
 
-#section-3 .row h3 {
+#section-3 .section-content .row-1 h3 {
   font-size: 24px;
   margin: 30px 0 20px;
 }
 
-#section-3 .row-2 {
+#section-3 .section-content .row-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 4rem;
   flex-wrap: wrap;
-}
-
-#section-3 .row-2 img {
-  /* For responsive */
-  margin: 2rem 1rem;
 }
 
 /* Section 3 End */
@@ -205,6 +198,9 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
   justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
 #footer .row .logo {
@@ -253,7 +249,6 @@ p {
 
   #section-2 img,
   #section-1 img {
-    max-width: 500px;
     width: 100%;
     padding: 0 2rem;
   }
@@ -275,13 +270,17 @@ p {
     margin-bottom: 20px;
   }
 
-  #section-3 .row {
+  #section-3 .section-content .row-1 {
     grid-template-columns: 1fr;
     row-gap: 2rem;
   }
 
-  #section-3 .row-2 {
-    justify-content: center;
+  #section-3 .section-content .row-2 {
+    flex-direction: column;
+  }
+
+  #section-3 .section-content .row-2 img {
+    margin: 40px 0;
   }
 
   #footer img {
